@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://shonenenenene.github.io/github-repos-search-app",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --open"
   },
@@ -28,6 +31,7 @@
     "axios": "^0.27.2",
     "core-js": "^3.23.3",
     "dateformat": "^5.0.3",
+    "gh-pages": "^4.0.0",
     "less-loader": "^11.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
