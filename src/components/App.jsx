@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import Main from "./main/Main"
 
 
@@ -12,11 +12,11 @@ const dispatch = useDispatch()
 
     return (
         
-        <BrowserRouter>
+        <HashRouter>
             <Routes >
                     <Route path="/" element={<Main />} />
                 </Routes>
-            </BrowserRouter>
+            </HashRouter>
         
     )
 }

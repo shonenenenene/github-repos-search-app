@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://shonenenenene.github.io/github-repos-search-app",
+  "homepage": "https://shonenenenene.github.io/github-repos-search-app/",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d public",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --open",
-    "build": "webpack-dev-server --open"
+    "build": "webpack"
   },
   "author": "",
   "license": "ISC",
