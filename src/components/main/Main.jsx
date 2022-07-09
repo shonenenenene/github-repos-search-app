@@ -16,7 +16,8 @@ const Main = () => {
     const isFetching = useSelector( state => state.repos.isFetching )
     const currentPage = useSelector( state => state.repos.currentPage )
     const totalCount = useSelector( state => state.repos.totalCount )
-    const perPage = useSelector(state => state.repos.perPage)
+    const perPage = useSelector( state => state.repos.perPage )
+    const isFetchError = useSelector(state => state.repos.isFetchError)
     const [searchValue, setSearchValue] = useState( '' )
     const pagesCount = Math.ceil(totalCount /perPage)
     const pages = []
@@ -32,12 +33,15 @@ const Main = () => {
         dispatch(getRepos(searchValue, currentPage, perPage))
     }
 
+
     return (
         <div>
             <div className='search'>
                 <input value={searchValue} onChange={(e) => setSearchValue(e.target.value)} className='search-input' type="text" />
                 <button onClick={() => searchHandler()} className='search-btn'>search</button>
             </div>
+            {(totalCount == 0) && <div className="empty">I didn't find anything :(</div>}
+            {isFetchError && <div className="error">an error occurred, please reload the page and try again</div>}
             {
                 isFetching === false
                 ?
