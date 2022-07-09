@@ -35,7 +35,8 @@ const Main = () => {
 
 
     return (
-        <div>
+        <div className='container'>
+            <h1 className='h1'>your github search</h1>
             <div className='search'>
                 <input value={searchValue} onChange={(e) => setSearchValue(e.target.value)} className='search-input' type="text" />
                 <button onClick={() => searchHandler()} className='search-btn'>search</button>
